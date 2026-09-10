@@ -1,0 +1,17 @@
+# dependencies (none needed, but just in case you add tooling later)
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Vercel
+.vercel/
+
+# build output
+.next/
+out/
+dist/

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nirav Michelsen — Electrical Engineer</title>
+<meta name="description" content="Electrical engineering student at UCLA designing hardware end to end — PCB design, embedded firmware, power electronics. Flight controllers, telemetry systems, and safety-critical boards.">
+<meta name="author" content="Nirav Michelsen">
+
+<!-- Social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nirav Michelsen — Electrical Engineer">
+<meta property="og:description" content="PCB design, embedded firmware, and power electronics. Flight controllers, telemetry systems, and safety-critical boards.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23071018'/><path d='M8 22V10l8 12V10' stroke='%234ec9e8' stroke-width='2.5' fill='none' stroke-linejoin='round'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">NIRAV MICHELSEN <span>/ EE</span></a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ---------------------------------------------------------- hero --- -->
+  <section class="hero" id="top">
+    <svg class="hero__trace" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#4ec9e8" stroke-width="1.2" opacity="0.28">
+        <path d="M-20 120 H 240 L 300 180 H 520 L 560 140 H 900"/>
+        <path d="M-20 300 H 160 L 220 240 H 430 L 480 290 H 760 L 820 230 H 1220"/>
+        <path d="M-20 460 H 340 L 400 400 H 640 L 700 460 H 1000 L 1060 400 H 1220"/>
+        <path d="M180 -20 V 90 L 240 150 V 320"/>
+        <path d="M980 620 V 470 L 920 410 V 250 L 980 190 V -20"/>
+        <path d="M620 620 V 520 L 680 460"/>
+      </g>
+      <g fill="#4ec9e8" opacity="0.5">
+        <circle cx="240" cy="150" r="3.5"/><circle cx="300" cy="180" r="3.5"/>
+        <circle cx="560" cy="140" r="3.5"/><circle cx="220" cy="240" r="3.5"/>
+        <circle cx="480" cy="290" r="3.5"/><circle cx="820" cy="230" r="3.5"/>
+        <circle cx="400" cy="400" r="3.5"/><circle cx="700" cy="460" r="3.5"/>
+        <circle cx="920" cy="410" r="3.5"/><circle cx="680" cy="460" r="3.5"/>
+      </g>
+    </svg>
+
+    <div class="wrap hero__inner">
+      <p class="eyebrow" id="heroEyebrow"></p>
+      <h1 id="heroName"></h1>
+      <p class="hero__role" id="heroRole"></p>
+      <p class="hero__tagline" id="heroTagline"></p>
+      <div class="hero__actions" id="heroActions"></div>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------------- about --- -->
+  <section class="section section--alt" id="about">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2>About</h2>
+        <span class="section__rule"></span>
+      </div>
+      <div class="about">
+        <div class="about__body" id="aboutBody"></div>
+        <div>
+          <ul class="timeline" id="timeline"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------- skills --- -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2>Skills</h2>
+        <span class="section__rule"></span>
+      </div>
+      <div class="skills" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------ projects --- -->
+  <section class="section section--alt" id="projects">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2>Projects</h2>
+        <span class="section__rule"></span>
+      </div>
+      <div class="projects" id="projects-list"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------- contact --- -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <p class="eyebrow" style="justify-content:center">04 / Contact</p>
+        <h2>Let's build something</h2>
+        <p id="contactBlurb"></p>
+        <div class="contact__links" id="contactLinks"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <span id="footerLeft"></span>
+    <span>Built from scratch — HTML, CSS, JS</span>
+  </div>
+</footer>
+
+<!-- ------------------------------------------------------------ lightbox -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Project image viewer">
+  <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <img class="lightbox__img" id="lbImg" alt="">
+  <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Next image">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <p class="lightbox__cap" id="lbCap"></p>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
