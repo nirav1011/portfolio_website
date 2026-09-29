@@ -61,7 +61,7 @@ const PROJECTS = [
     blurb:
       "Wrote the GPS and IMU drivers and the wireless Raspberry Pi link that gave Bruin Racing's Baja car its first real-time telemetry — position and speed live at the base station instead of after the run. Now designing the ESP32 driver-dashboard PCB: CAN in, SPI display out, behind a load-dump-protected 12 V automotive front end.",
     image: {
-      src: "images/baja-car.jpg",
+      src: "images/baja-telemetry.jpg",
       alt: "Bruin Racing Baja car airborne on a desert course in Arizona",
       position: "50% 45%",
     },

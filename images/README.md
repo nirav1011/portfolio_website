@@ -7,7 +7,7 @@ from the portfolio PDF.
 |---|---|
 | `headshot.jpg`          | Hero photo |
 | `flight-controller.jpg` | Flight controller: 3D render of the PCB |
-| `baja-car.jpg`          | Baja telemetry: the car competing in Arizona |
+| `baja-telemetry.jpg`    | Baja telemetry: the car competing in Arizona |
 | `go-kart.jpg`           | Go-kart: driving the kart |
 | `fuel-cell.jpg`         | Fuel cell: SolidWorks model of the stack |
 | `carbon-capture.jpg`    | Carbon capture: the electrolyzer running |
