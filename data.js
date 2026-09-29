@@ -3,7 +3,7 @@
    Edit this file to change text, projects, links, or photos.
    No other file needs to be touched for normal content updates.
 
-   The site's job is to make someone want the PDF portfolio, not to be it.
+   The site's job is to make someone want the full portfolio, not to be it.
    Keep each project to two sentences and one image — depth lives in the deck.
    ========================================================================= */
 
@@ -21,9 +21,9 @@ const PROFILE = {
   linkedin: "https://linkedin.com/in/nirav-michelsen",
   github: "https://github.com/nirav1011",
 
-  // The full deck. Replace this file when the deck changes.
+  // The full deck (Google Slides). Edits to the deck show up automatically.
   portfolio: {
-    href: "Nirav-Michelsen-Portfolio.pdf",
+    href: "https://docs.google.com/presentation/d/1gTa4ZnsmEvqQfnV4Snby2n_-bSgKRv72G-zggjgMubY/edit?usp=sharing",
     detail: "23 pages · schematics, power trees, build photos",
   },
 };

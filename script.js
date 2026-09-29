@@ -44,8 +44,7 @@
   }
 
   function pdfBtn(variant) {
-    const a = linkBtn(PROFILE.portfolio.href, "Download full portfolio (PDF)", "download", variant);
-    a.setAttribute("download", "");
+    const a = linkBtn(PROFILE.portfolio.href, "View full portfolio", "arrow", variant);
     return a;
   }
 
@@ -76,7 +75,8 @@
 
     const nav = $("#navPdf");
     nav.href = PROFILE.portfolio.href;
-    nav.setAttribute("download", "");
+    nav.target = "_blank";
+    nav.rel = "noopener noreferrer";
   }
 
   /* --------------------------------------------------------- projects --- */

@@ -1,6 +1,6 @@
 # Nirav Michelsen — Portfolio
 
-A one-page site whose job is to make people want the full portfolio PDF.
+A one-page site whose job is to make people want the full portfolio deck.
 Five projects, two sentences and one image each, and a prominent download
 button for the deck. Blueprint aesthetic, fully responsive, no build step and
 no dependencies.
@@ -37,7 +37,6 @@ styles.css    all styling; the palette lives in :root at the top
 data.js       ← ALL YOUR CONTENT. This is the only file you normally edit.
 script.js     renders data.js into the page
 images/       one photo per project, plus the headshot
-Nirav-Michelsen-Portfolio.pdf   the full deck behind every download button
 vercel.json   caching and security headers for deployment
 ```
 
@@ -51,15 +50,14 @@ Adding a project or changing a paragraph never requires touching HTML.
 ### Text and links
 
 Open `data.js`. The `PROFILE` object at the top holds your name, role, the
-short "what I do" paragraph, contact links, and the path to the portfolio PDF.
+short "what I do" paragraph, contact links, and the link to the portfolio deck.
 Change the strings and refresh.
 
-### Updating the portfolio PDF
+### Updating the portfolio
 
-Replace `Nirav-Michelsen-Portfolio.pdf` with the new deck, keeping the same
-filename, and update `portfolio.detail` in `data.js` if the page count
-changed. Compress it first: the original export was 8 MB, and a 2–3 MB copy
-downloads much faster on a phone.
+The portfolio is a Google Slides deck linked from `portfolio.href` in `data.js`,
+so edits to the deck appear on the site automatically. Keep its sharing set to
+"Anyone with the link can view". Update `portfolio.detail` if the page count changes.
 
 ### Adding or editing a project
 
@@ -72,7 +70,7 @@ Each entry in the `PROJECTS` array looks like this:
   period: "Aug 2026 — Present",
   status: "In progress · v1 boards on order",   // optional
   tags: ["Altium", "STM32F405", "4-layer PCB"],
-  blurb: "Two sentences. The detail belongs in the PDF.",
+  blurb: "Two sentences. The detail belongs in the deck.",
   image: { src: "images/flight-controller.jpg", alt: "…", position: "50% 40%" },
   link: { label: "Code on GitHub", href: "https://github.com/..." }, // optional
 }
