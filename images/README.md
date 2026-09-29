@@ -1,32 +1,23 @@
 # Project photos
 
-Drop your image files in this folder, then reference them from `../data.js`.
+One image per project, referenced from `../data.js`. All of them were pulled
+from the portfolio PDF.
 
-The filenames already referenced in `data.js` are:
+| File | Used for |
+|---|---|
+| `headshot.jpg`          | Hero photo |
+| `flight-controller.jpg` | Flight controller: 3D render of the PCB |
+| `baja-car.jpg`          | Baja telemetry: the car competing in Arizona |
+| `go-kart.jpg`           | Go-kart: driving the kart |
+| `fuel-cell.jpg`         | Fuel cell: SolidWorks model of the stack |
+| `carbon-capture.jpg`    | Carbon capture: the electrolyzer running |
 
-| File | Project | What it should show |
-|---|---|---|
-| `fc-board.jpg`      | Flight controller | The assembled board, top-down, good light |
-| `fc-layout.jpg`     | Flight controller | Altium layout screenshot, routed |
-| `fc-schematic.jpg`  | Flight controller | Power tree section of the schematic |
-| `fc-quad.jpg`       | Flight controller | The quad with your board installed |
-| `baja-car.jpg`      | Baja SAE | The car during testing |
-| `baja-daq.jpg`      | Baja SAE | DAQ enclosure and wiring |
-| `baja-dash.jpg`     | Baja SAE | Driver dashboard PCB |
-| `fuelcell-pcb.jpg`  | Fuel cell | The safety PCB |
-| `fuelcell-stack.jpg`| Fuel cell | Assembled PEM stack |
-| `kart-build.jpg`    | Go-kart | Finished kart |
-| `kart-cad.jpg`      | Go-kart | SolidWorks assembly |
-| `kart-cohort.jpg`   | Go-kart | Student cohort build day |
-
-Use those exact names and everything appears automatically. To use different
-names, or to add/remove photos, edit the `images` array for that project in
-`data.js`.
+To swap one out, replace the file with the same name, or change `image.src`
+for that project in `data.js`.
 
 **Tips**
-- Landscape 4:3 or 3:2 crops look best in the grid.
-- Resize to about 1600px on the long edge before committing. Phone photos are
-  4–8 MB each; 1600px JPEGs are ~300 KB and load far faster.
-- `.jpg` for photos, `.png` for screenshots of schematics and layouts.
-- Any image listed in `data.js` but missing here renders as a labelled
-  placeholder frame, so the site never looks broken mid-collection.
+- Every card shows its image in the same frame, so the edges get cropped. If
+  the subject ends up off-center, set `image.position` in `data.js`
+  (for example `"50% 30%"` shows more of the top).
+- Resize to about 1400px on the long edge. Phone photos are 4–8 MB each; a
+  1400px JPEG is around 200 KB.

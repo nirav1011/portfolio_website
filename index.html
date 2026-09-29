@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nirav Michelsen — Electrical Engineer</title>
-<meta name="description" content="Electrical engineering student at UCLA designing hardware end to end — PCB design, embedded firmware, power electronics. Flight controllers, telemetry systems, and safety-critical boards.">
+<meta name="description" content="Electrical engineering student at UCLA designing hardware end to end — a from-scratch drone flight controller, Baja SAE telemetry, and safety-critical fuel cell electronics.">
 <meta name="author" content="Nirav Michelsen">
 
 <!-- Social preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nirav Michelsen — Electrical Engineer">
-<meta property="og:description" content="PCB design, embedded firmware, and power electronics. Flight controllers, telemetry systems, and safety-critical boards.">
+<meta property="og:description" content="PCB design, embedded firmware, and power electronics. Five projects, and the full portfolio as a PDF.">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23071018'/><path d='M8 22V10l8 12V10' stroke='%234ec9e8' stroke-width='2.5' fill='none' stroke-linejoin='round'/></svg>">
@@ -28,16 +28,11 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__brand" href="#top">NIRAV MICHELSEN <span>/ EE</span></a>
-    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
-      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <nav class="nav__right" aria-label="Primary">
+      <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#contact">Contact</a>
+      <a class="nav__pdf" id="navPdf" href="#">Portfolio PDF</a>
+    </nav>
   </div>
 </header>
 
@@ -64,40 +59,17 @@
     </svg>
 
     <div class="wrap hero__inner">
-      <p class="eyebrow" id="heroEyebrow"></p>
-      <h1 id="heroName"></h1>
-      <p class="hero__role" id="heroRole"></p>
-      <p class="hero__tagline" id="heroTagline"></p>
-      <div class="hero__actions" id="heroActions"></div>
-    </div>
-  </section>
-
-  <!-- --------------------------------------------------------- about --- -->
-  <section class="section section--alt" id="about">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="section__num">01</span>
-        <h2>About</h2>
-        <span class="section__rule"></span>
-      </div>
-      <div class="about">
-        <div class="about__body" id="aboutBody"></div>
+      <div class="hero__id">
+        <img class="hero__photo" id="heroPhoto" alt="" width="88" height="88">
         <div>
-          <ul class="timeline" id="timeline"></ul>
+          <p class="eyebrow" id="heroEyebrow"></p>
+          <h1 id="heroName"></h1>
+          <p class="hero__role" id="heroRole"></p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- -------------------------------------------------------- skills --- -->
-  <section class="section" id="skills">
-    <div class="wrap">
-      <div class="section__head">
-        <span class="section__num">02</span>
-        <h2>Skills</h2>
-        <span class="section__rule"></span>
-      </div>
-      <div class="skills" id="skills-grid"></div>
+      <p class="hero__about" id="heroAbout"></p>
+      <div class="hero__actions" id="heroActions"></div>
+      <p class="hero__pdfnote" id="heroPdfNote"></p>
     </div>
   </section>
 
@@ -105,7 +77,7 @@
   <section class="section section--alt" id="projects">
     <div class="wrap">
       <div class="section__head">
-        <span class="section__num">03</span>
+        <span class="section__num">01</span>
         <h2>Projects</h2>
         <span class="section__rule"></span>
       </div>
@@ -117,9 +89,9 @@
   <section class="section" id="contact">
     <div class="wrap">
       <div class="contact">
-        <p class="eyebrow" style="justify-content:center">04 / Contact</p>
-        <h2>Let's build something</h2>
-        <p id="contactBlurb"></p>
+        <p class="eyebrow" style="justify-content:center">02 / The full story</p>
+        <h2>The deck goes deeper</h2>
+        <p>Schematics, power trees, build photos, and what broke along the way. The fastest way to reach me is email — I read everything.</p>
         <div class="contact__links" id="contactLinks"></div>
       </div>
     </div>
@@ -133,21 +105,6 @@
     <span>Built from scratch — HTML, CSS, JS</span>
   </div>
 </footer>
-
-<!-- ------------------------------------------------------------ lightbox -->
-<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Project image viewer">
-  <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Close">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <button class="lightbox__btn lightbox__prev" id="lbPrev" aria-label="Previous image">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <img class="lightbox__img" id="lbImg" alt="">
-  <button class="lightbox__btn lightbox__next" id="lbNext" aria-label="Next image">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-  </button>
-  <p class="lightbox__cap" id="lbCap"></p>
-</div>
 
 <script src="data.js"></script>
 <script src="script.js"></script>

@@ -1,7 +1,9 @@
 # Nirav Michelsen — Portfolio
 
-A single-page portfolio site for engineering projects. Blueprint aesthetic,
-fully responsive, no build step and no dependencies.
+A one-page site whose job is to make people want the full portfolio PDF.
+Five projects, two sentences and one image each, and a prominent download
+button for the deck. Blueprint aesthetic, fully responsive, no build step and
+no dependencies.
 
 **Live:** _(add your Vercel URL here once deployed)_
 
@@ -30,11 +32,12 @@ To edit, change a file and refresh the browser. No compile, no watcher.
 ## How the files fit together
 
 ```
-index.html    page structure — section order, nav, lightbox markup
+index.html    page structure — nav, hero, projects, closing call to action
 styles.css    all styling; the palette lives in :root at the top
 data.js       ← ALL YOUR CONTENT. This is the only file you normally edit.
-script.js     renders data.js into the page, runs the nav and lightbox
-images/       your project photos
+script.js     renders data.js into the page
+images/       one photo per project, plus the headshot
+Nirav-Michelsen-Portfolio.pdf   the full deck behind every download button
 vercel.json   caching and security headers for deployment
 ```
 
@@ -45,18 +48,18 @@ Adding a project or changing a paragraph never requires touching HTML.
 
 ## Editing your content
 
-### Text, links, and skills
+### Text and links
 
-Open `data.js`. The `PROFILE` object at the top holds your name, role,
-tagline, about paragraphs, contact links, and the skills lists. Change the
-strings and refresh.
+Open `data.js`. The `PROFILE` object at the top holds your name, role, the
+short "what I do" paragraph, contact links, and the path to the portfolio PDF.
+Change the strings and refresh.
 
-**Before you deploy, fix these two:**
+### Updating the portfolio PDF
 
-1. `github:` is set to `https://github.com/YOUR_GITHUB_USERNAME` — replace it
-   with your real handle.
-2. `resume:` points at `resume.pdf`. Drop your résumé PDF in the repo root
-   with that exact name, or set the value to `null` to hide the button.
+Replace `Nirav-Michelsen-Portfolio.pdf` with the new deck, keeping the same
+filename, and update `portfolio.detail` in `data.js` if the page count
+changed. Compress it first: the original export was 8 MB, and a 2–3 MB copy
+downloads much faster on a phone.
 
 ### Adding or editing a project
 
@@ -65,36 +68,23 @@ Each entry in the `PROJECTS` array looks like this:
 ```js
 {
   id: "flight-controller",              // used for the #anchor link
-  title: "Custom Drone Flight Controller",
-  subtitle: "PCB + Firmware · Personal Project",
+  title: "Custom 5\" Drone + Flight Controller",
   period: "Aug 2026 — Present",
-  tags: ["Altium", "STM32F405", "Power Electronics"],
-  summary: "One sentence a recruiter reads in three seconds.",
-  bullets: [
-    "What you did, specifically, with the parts and the numbers.",
-  ],
-  images: [
-    { src: "images/fc-board.jpg", caption: "Assembled flight controller" },
-  ],
-  links: [
-    { label: "GitHub — design files", href: "https://github.com/..." },
-  ],
+  status: "In progress · v1 boards on order",   // optional
+  tags: ["Altium", "STM32F405", "4-layer PCB"],
+  blurb: "Two sentences. The detail belongs in the PDF.",
+  image: { src: "images/flight-controller.jpg", alt: "…", position: "50% 40%" },
+  link: { label: "Code on GitHub", href: "https://github.com/..." }, // optional
 }
 ```
 
-Projects render in array order, so the first one in the list appears first on
-the page. `links` and `images` can be empty arrays.
+Projects render in array order. `image.position` adjusts the crop when the
+interesting part of a photo isn't in the center.
 
-### Adding photos
+### Photos
 
-Put image files in `images/` and list them in that project's `images` array.
-See `images/README.md` for the filenames already referenced and for sizing
-advice.
-
-Any image listed in `data.js` but not present in `images/` renders as a
-labelled placeholder frame rather than a broken image, and it's skipped when
-paging through the lightbox — so the site stays presentable while you're still
-collecting photos.
+See `images/README.md`. Resize to about 1400px on the long edge before
+committing.
 
 ---
 
@@ -162,7 +152,7 @@ subdomain, and it costs about $12/year.
   blocked or slow, the page falls back to system fonts and still looks fine.
 - **No JavaScript framework**, no `node_modules`, nothing to keep updated. The
   site will still build and deploy unchanged in five years.
-- **Accessibility:** keyboard-navigable, skip link, focus trapping in the
-  lightbox, and all content is in the DOM regardless of whether JS runs.
+- **Accessibility:** keyboard-navigable, skip link, and alt text on every
+  project image.
 - **Colors** are CSS variables in `:root` at the top of `styles.css`. Change
   `--accent` to re-theme the whole site in one edit.
